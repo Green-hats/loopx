@@ -2002,6 +2002,12 @@ backend、实时双向同步或按命令拆开的权威；晋升后不支持的�
 
 #### 重构主线总览
 
+Shared-goal alignment 与 amendment admission 在 promotion 后共用同一个 canonical
+Todo/lease revision，包括权威空集合；旧展示／lease 文件读取仅保留在 promotion 前。
+Proposal source digest 包含该 revision，但不将它冒充 Goal intent revision 或
+amendment commit receipt。这是有边界的 T3 consumer 闭合；默认 provider、永久投影、
+D1–D3 资格化和 T1/T2 条件保持不变。
+
 以下规划保留原有方向；执行卡是它们的展开，不是替代或取消：
 
 1. **闭合 TS 事务与 consumer。** 按 [T0–T3](typescript-control-plane-migration-v0.zh-CN.md#当前-stack-合入后的执行卡) 收口规则并删除重复决策。

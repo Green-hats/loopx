@@ -214,6 +214,16 @@ roots, but must not erase public error semantics. Assert the real production
 boundary on both the minimum and forward-compatibility runtimes so removing the
 production sanitization makes the newer-runtime test fail.
 
+### Runtime diagnostic drift in parity fixtures
+
+When a newer runtime fails parity only because a filesystem error includes an
+additional path, reproduce with that runtime before changing product behavior.
+If the public contract is path-free, sanitize the diagnostic once in the
+production adapter before returning it. Test support may normalize temporary
+roots, but must not erase public error semantics. Assert the real production
+boundary on both the minimum and forward-compatibility runtimes so removing the
+production sanitization makes the newer-runtime test fail.
+
 ## Minimal Evidence Packet
 
 Desktop runtime preparation failures must remain inside the live startup
